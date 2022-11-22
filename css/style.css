@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logoheader {
+    display: flex;
+  }
+  
+  #container_loc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(#CFCFCF, #EAEAEA);
+    height: 50px;
+    gap: 5px;
+  }
+  
+  #loc, i {
+    font-family: "Roboto", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #353535;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .fa-location-dot {
+    line-height: 44px;
+  }
+  
