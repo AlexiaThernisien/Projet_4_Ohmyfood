@@ -1,23 +1,51 @@
 @import "./utils/_variables.scss";
+//BODY//
+body{
+    margin: 0 auto;
+}
+h1{
+    font-family: $font-text;
+    font-weight: 600;
+    font-size: 19px;
+}
+h2{
+    font-family: $font-text;
+    font-weight: 600;
+    font-size: 14px;
+}
+h3{
+    font-family: $font-title;
+    font-size: 14px;
+}
+h4{
+    font-family: $font-text;
+    font-weight: 100;
+    font-size: 12px;
+}
 //HEADER//
 header{
     display: flex;
     justify-content: center;
+
 }
 .logoheader{
     display: flex;
+    padding: 10px;
+    width: 40%;
 }
+
+//MAIN//
 #container_loc{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: linear-gradient(#CFCFCF, #EAEAEA);
+    background: #EAEAEA;
     height: 50px;
     gap: 5px;
 }
 #loc, i{
     font-family: 'Roboto', sans-serif;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 400;
     color: #353535;
     text-align: center;
@@ -25,4 +53,86 @@ header{
 }
 .fa-location-dot{
     line-height: 44px;
+}
+//SECTION RESA//
+#resa{
+    text-align: center;
+    background-color: #F6F6F6;
+    width: 100%;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    font-family: $font-text;
+    color: $font-color;
+    height: 220px;
+    justify-content: space-evenly;
+}
+#intro h1{
+    margin: 0 30px 0 30px;
+}
+.text_thin{
+    font-family: $font-text;
+    font-weight: 300;
+    font-size: 14px;
+}
+button{
+    display: inline-block;
+    align-self: center;
+    background: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
+    color: white;
+    border-radius: 6em;
+    border: transparent;
+    box-shadow: 0px 5px 17px 0px rgba(51, 53, 50, 0.77);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    width: 187px;
+    line-height: 0.7;
+}
+//SECTION TUTO//
+#tuto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#tuto_ul{
+    list-style-type: decimal;
+}
+#tuto_ul li{
+    font-family: $font-text;
+    font-size: 14px;
+    line-height: 30px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+    width: 300px;
+}
+//SECTION RESTAURANTS//
+#places{
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+}
+#container_cards{
+
+}
+.card{
+    height: 250px;
+    width: 300px;
+}
+.img_card{
+    height: 150px;
+    width: 250px;
+}
+.img_card img{
+    height: 150px;
+}
+.container_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+}
+.title{
+
 }
