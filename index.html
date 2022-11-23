@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <script src="https://kit.fontawesome.com/89b26316cc.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -18,14 +18,14 @@
             <img src="css/logo/ohmyfood.svg" class="logoheader" alt="Logo de Ohmyfood Paris"> 
         </header>
         <main>
-            <section>
+            <section id="resa">
             <div id="container_loc">
                 <i class="fa-solid fa-location-dot"></i><span id="loc">Paris, Belleville</span>
             </div>
-            <div>
+            <div id="intro">
                 <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button>Explorez nos restaurants</button>
+                <span class="text_thin">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
+                <button><p>Explorez nos restaurants</p></button>
             </div>
             </section>
             <section id="tuto">
@@ -38,8 +38,9 @@
             </section>
             <section id="places">
                 <h1>Restaurants</h1>
+                <div id="container_cards">
                 <div class="card">
-                    <div class="img_card"><img src="css/images/palette_gout.svg" class="La Palette du Goût" alt="Restaurant La Palette du Goût"></div>
+                    <div class="img_card"><img src="css/images/palette_gout.jpg" class="La Palette du Goût" alt="Image du Restaurant La Palette du Goût"></div>
                     <div class="container_info">
                         <div class="title">
                             <h2>La palette du goût</h2>
@@ -49,7 +50,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="img_card"><img src="css/images/note_enchantee.svg" class="La Note Enchantée" alt="Restaurant La Note Enchantée"></div>
+                    <div class="img_card"><img src="css/images/note_enchantee.jpg" class="La Note Enchantée" alt="Image du Restaurant La Note Enchantée"></div>
                     <div class="container_info">
                         <div class="title">
                             <h2>La note enchantée</h2>
@@ -59,7 +60,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="img_card"><img src="css/images/francaise.svg" class="A la française" alt="Restaurant À la française"></div>
+                    <div class="img_card"><img src="css/images/francaise.jpg" class="A la française" alt="Image du Restaurant À la française"></div>
                     <div class="container_info">
                         <div class="title">
                             <h2>À la française</h2>
@@ -69,7 +70,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="img_card"><img src="css/images/delice_sens.svg" class="Le délice des sens" alt="Restaurant Le délice des sens"></div>
+                    <div class="img_card"><img src="css/images/delice_sens.jpg" class="Le délice des sens" alt="Image du Restaurant Le délice des sens"></div>
                     <div class="container_info">
                         <div class="title">
                             <h2>Le délice des sens</h2>
@@ -77,6 +78,7 @@
                         </div>
                         <div class="icon"><i class="fa-regular fa-heart"></i></div>
                     </div>
+                </div>
                 </div>
             </section>
         </main>
