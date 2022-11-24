@@ -100,7 +100,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   width: 187px;
-  line-height: 0.7;
+  line-height: 3;
 }
 
 #tuto {
@@ -113,8 +113,13 @@ button {
 }
 
 #tuto_ul {
-  list-style-type: decimal;
-  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0;
+  gap: 40px;
 }
 
 #tuto_ul li {
@@ -122,12 +127,10 @@ button {
   font-size: 12px;
   font-weight: 500;
   line-height: 55px;
+  width: 90%;
   border: 2px solid transparent;
   border-radius: 15px;
   background-color: #F6F6F6;
-  width: 85%;
-  margin: 20px 0px;
-  padding-left: 15px;
   box-shadow: 0px 5px 25px 0px rgba(173, 173, 172, 0.77);
 }
 
@@ -158,13 +161,25 @@ button {
   color: black;
 }
 
+#container_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#container_cards a {
+  text-decoration: none;
+  color: black;
+}
+
 .card {
   background-color: white;
   border: 0px solid transparent;
   border-radius: 15px;
-  margin: 20px;
-  width: 85%;
   box-shadow: 0px 13px 17px 0px rgba(136, 140, 135, 0.77);
+  width: 90%;
 }
 
 .img_card {
@@ -181,7 +196,6 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 85%;
 }
 
 .title {
@@ -194,9 +208,21 @@ button {
   line-height: 17px;
 }
 
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon i {
+  align-items: center;
+  padding-right: 15px;
+}
+
 footer {
   background-color: #353535;
   height: 150px;
+  margin-top: 50px;
 }
 
 footer h3 {
