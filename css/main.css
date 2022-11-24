@@ -15,14 +15,20 @@ h2 {
 }
 
 h3 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-size: 14px;
+  color: white;
 }
 
 h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 12px;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 header {
@@ -100,21 +106,42 @@ button {
 #tuto {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+}
+
+#tuto h1 {
+  padding-left: 10px;
 }
 
 #tuto_ul {
   list-style-type: decimal;
+  margin: 0;
 }
 
 #tuto_ul li {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 55px;
   border: 2px solid transparent;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: #F6F6F6;
-  width: 300px;
+  width: 85%;
+  margin: 20px 0px;
+  padding-left: 15px;
+  box-shadow: 0px 5px 25px 0px rgba(173, 173, 172, 0.77);
+}
+
+#tuto_ul li i {
+  margin-right: 10px;
+  color: grey;
+}
+
+#tuto_ul li:hover {
+  background-color: rgb(237, 225, 252);
+}
+
+#tuto_ul li:hover i {
+  color: #9356DC;
 }
 
 #places {
@@ -123,25 +150,67 @@ button {
   flex-direction: column;
 }
 
+#places h1 {
+  padding-left: 10px;
+}
+
+#places i {
+  color: black;
+}
+
 .card {
-  height: 250px;
-  width: 300px;
+  background-color: white;
+  border: 0px solid transparent;
+  border-radius: 15px;
+  margin: 20px;
+  width: 85%;
+  box-shadow: 0px 13px 17px 0px rgba(136, 140, 135, 0.77);
 }
 
 .img_card {
-  height: 150px;
-  width: 250px;
+  border-radius: 20px 20px 0 0;
 }
 
 .img_card img {
-  height: 150px;
+  border-radius: 15px 15px 0 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .container_info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 250px;
+  width: 85%;
+}
+
+.title {
+  margin: 0;
+  padding: 10px 0 10px 10px;
+}
+
+.title h2, h4 {
+  margin: 0;
+  line-height: 17px;
+}
+
+footer {
+  background-color: #353535;
+  height: 150px;
+}
+
+footer h3 {
+  margin: 0;
+  padding: 15px;
+}
+
+#footer_ul i {
+  color: white;
+}
+
+#footer_ul {
+  color: white;
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=main.css.map */
