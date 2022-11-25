@@ -31,6 +31,12 @@ li {
   font-size: 14px;
 }
 
+span {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -38,6 +44,7 @@ header {
 
 .logoheader {
   display: flex;
+  align-items: center;
   padding: 10px;
   width: 40%;
 }
@@ -49,6 +56,7 @@ header {
   background: #EAEAEA;
   height: 50px;
   gap: 5px;
+  box-shadow: inset 0px 6px 3px -3px rgba(50, 53, 50, 0.52);
 }
 
 #loc, i {
@@ -109,7 +117,7 @@ button {
 }
 
 #tuto h1 {
-  padding-left: 10px;
+  padding: 30px 0 0 10px;
 }
 
 #tuto_ul {
@@ -119,19 +127,36 @@ button {
   justify-content: center;
   align-items: center;
   padding-inline-start: 0;
-  gap: 40px;
+  margin-block-start: 0.5em;
+  margin-block-end: 3.5em;
+  gap: 20px;
 }
 
 #tuto_ul li {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 55px;
-  width: 90%;
+  width: 80%;
+  padding-left: 30px;
   border: 2px solid transparent;
   border-radius: 15px;
   background-color: #F6F6F6;
   box-shadow: 0px 5px 25px 0px rgba(173, 173, 172, 0.77);
+}
+
+.num {
+  position: absolute;
+  text-align: center;
+  top: 17px;
+  left: -10px;
+  border-radius: 50px;
+  line-height: 15px;
+  width: 15px;
+  color: white;
+  border: 1px solid #9356DC;
+  background-color: #9356DC;
 }
 
 #tuto_ul li i {
@@ -154,7 +179,7 @@ button {
 }
 
 #places h1 {
-  padding-left: 10px;
+  padding: 30px 0 0 10px;
 }
 
 #places i {
@@ -167,6 +192,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  padding-bottom: 60px;
 }
 
 #container_cards a {
@@ -175,11 +201,27 @@ button {
 }
 
 .card {
+  position: relative;
   background-color: white;
   border: 0px solid transparent;
   border-radius: 15px;
   box-shadow: 0px 13px 17px 0px rgba(136, 140, 135, 0.77);
   width: 90%;
+}
+
+.new {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid transparent;
+  background: #99E2D0;
+  border-radius: 2px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: #018766;
+  line-height: 20px;
+  width: 70px;
 }
 
 .img_card {
@@ -215,28 +257,36 @@ button {
 }
 
 .icon i {
+  cursor: pointer;
   align-items: center;
   padding-right: 15px;
 }
 
 footer {
   background-color: #353535;
-  height: 150px;
-  margin-top: 50px;
+  height: 170px;
 }
 
 footer h3 {
   margin: 0;
-  padding: 15px;
+  padding: 20px 0 0 20px;
 }
 
 #footer_ul i {
   color: white;
+  padding-right: 5px;
 }
 
 #footer_ul {
   color: white;
   list-style-type: none;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 20px;
+}
+
+#footer_ul li {
+  line-height: 25px;
 }
 
 /*# sourceMappingURL=main.css.map */
