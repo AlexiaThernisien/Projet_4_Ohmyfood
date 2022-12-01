@@ -68,7 +68,7 @@ header{
 //SECTION RESA//
 #resa{
     text-align: center;
-    background-color: #F6F6F6;
+    background-color: $backlightgrey;
     width: 100%;
 }
 #intro{
@@ -90,6 +90,7 @@ header{
 button{
     display: inline-block;
     align-self: center;
+    cursor: pointer;
     background: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
     color: white;
     border-radius: 6em;
@@ -99,6 +100,11 @@ button{
     font-weight: 400;
     width: 187px;
     line-height: 3;
+}
+button:hover{
+    box-shadow: 0px 5px 37px 0px rgba(51, 53, 50, 0.77);
+    background: linear-gradient(200.64deg, $color-prim-light -5.2%, $color-sec-light 110.74%);
+
 }
 //SECTION TUTO//
 #tuto{
@@ -129,7 +135,7 @@ button{
     padding-left: 30px;
     border: 2px solid transparent;
     border-radius: 15px;
-    background-color: #F6F6F6;
+    background-color: $backlightgrey;
     box-shadow: 0px 5px 25px 0px rgba(173, 173, 172, 0.77);
 }
 .num{
@@ -227,10 +233,25 @@ button{
     flex-direction: column;
     justify-content: center;
 }
-.icon i{
+.icon{
     cursor: pointer;
     align-items: center;
-    padding-right: 15px;
+    padding-right: 15px; 
+}
+.full{
+    opacity: 0;
+    //background-image: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    transition: all 200ms ease-in-out 
+}
+.icon:hover .full{
+    opacity: 1;
+    transform-origin: 50% bottom;
+    transition-duration: 0.5s;
+    transform: translateY(11%) scale(1.2);
 }
 //FOOTER// 
 footer{
@@ -254,4 +275,69 @@ footer h3{
 }
 #footer_ul li{
     line-height: 25px;
+}
+#footer_ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+//MENUS RESTAURANTS
+.arrow_i{
+    align-self: center;
+}
+img{
+    width: 100%;
+    z-index: -1;
+    //position: absolute;
+    //top: 60px;
+}
+.rest_name{
+    font-family: $font-title;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+.rest_name i{
+    line-height: 40px;
+    font-size: 24px;
+    align-self: center;
+}
+.menu{
+    background-color: #F6F6F6;
+    border-radius: 35px 35px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    //position: relative;
+    //top: 200px;
+}
+.appetizer, .meal, .dessert{
+    margin-bottom: 30px;
+}
+.id_menu{
+    margin-left: 10px;
+}
+.plat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 13px 17px 0px rgba(136, 140, 135, 0.77);
+    margin: 10px;
+    padding: 10px;
+}
+.btn_check{
+    display: none;
+}
+.price{
+    font-family: $font-text;
+    font-size: 12px;
+    font-weight: 500;
+    align-self: flex-end;
+}
+.order{
+    margin-bottom: 30px;
 }
