@@ -32,10 +32,68 @@ span{
     font-size: 12px;
     font-weight: 300;
 }
+//LOADER//
+#loader{
+    display: none;
+    margin: auto;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.4;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: $backlightgrey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+}
+#loader span{
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    opacity: 1;
+    color: black;
+    margin: 0 15px;
+    animation: loader infinite 0.3s alternate;
+}
+.bowl_1{
+    background-color: $color-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bowl_2{
+    background-color: $color-secondary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-delay: 0.05s;
+}
+.bowl_3{
+    background-color: $color-tertiary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-delay: 0.1s;
+}
+@keyframes loader {
+    0% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    99% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
 //HEADER//
 header{
     display: flex;
     justify-content: center;
+    height: 55px;
+    background-color: white;
 }
 .logoheader{
     display: flex;
@@ -102,9 +160,10 @@ button{
     line-height: 3;
 }
 button:hover{
-    box-shadow: 0px 5px 37px 0px rgba(51, 53, 50, 0.77);
-    background: linear-gradient(200.64deg, $color-prim-light -5.2%, $color-sec-light 110.74%);
-
+    box-shadow: 4px 8px 25px 0px rgba(51, 50, 50, 0.7);
+    background: $backhover-color;
+    text-shadow: 0px 2px 15px rgba(0, 0, 0, 1);
+    color: $color-primary;
 }
 //SECTION TUTO//
 #tuto{
@@ -132,6 +191,7 @@ button:hover{
     font-weight: 500;
     line-height: 55px;
     width: 80%;
+    max-width: 500px;
     padding-left: 30px;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -190,8 +250,10 @@ button:hover{
     background-color: white;
     border: 0px solid transparent;
     border-radius: 15px;
-    box-shadow: 0px 13px 17px 0px rgba(136, 140, 135, 0.77);
+    box-shadow: 0px 7px 16px 0px rgb(136 140 135 / 46%);
     width: 90%;
+    max-width: 350px;
+    max-height: 250px;
 }
 .new{
     position: absolute;
@@ -208,7 +270,13 @@ button:hover{
     width: 70px;
 }
 .img_card{
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    max-width: 350px;
+    max-height: 150px;
 }
 .img_card img{
     border-radius: 15px 15px 0 0;
@@ -238,17 +306,24 @@ button:hover{
     align-items: center;
     padding-right: 15px; 
 }
-.full{
-    opacity: 0;
-    //background-image: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
-    background-image: linear-gradient(#ff79da, #9356dc);
+.icon i{
+    opacity: 1;
+    font-weight: 100;
+    font-size: 20px;
+    background-image: linear-gradient($color-secondary,$color-primary);
     -webkit-background-clip: text; 
     background-clip: text;
-    color: transparent;
-    transition: all 200ms ease-in-out 
+    color: $font-color;
+    transition: all 400ms ease-in-out;
 }
-.icon:hover .full{
+.icon i:hover{
+    animation: fill 0.4s ease-in-out;
+    display: inline-block;
     opacity: 1;
+    background-image: linear-gradient($color-secondary,$color-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
     transform-origin: 50% bottom;
     transition-duration: 0.5s;
     transform: translateY(11%) scale(1.2);
@@ -257,6 +332,8 @@ button:hover{
 footer{
     background-color: #353535;
     height: 170px;
+    display: flex;
+    flex-direction: column;
 }
 footer h3{
     margin: 0;
@@ -267,6 +344,8 @@ footer h3{
     padding-right: 5px;
 }
 #footer_ul{
+    display: flex;
+    flex-direction: column;
     color: white;
     list-style-type: none;
     padding-block-start: 0;
@@ -284,12 +363,26 @@ footer h3{
 //MENUS RESTAURANTS
 .arrow_i{
     align-self: center;
+    position: absolute;
+    left: 10px;
+    top: 20px;
 }
-img{
+.arrow_i:hover{
+    border-radius: 50%;
+    height: 25px;
+    width:25px;
+    line-height: 25px;
+    border: 0px solid transparent;
+    box-shadow: 0px 5px 17px 0px rgba(51, 53, 50, 0.77);
+    text-align: center;
+    vertical-align: baseline;
+}
+.resto_pic{
+    height: 300px;
+}
+.resto_pic img{
     width: 100%;
     z-index: -1;
-    //position: absolute;
-    //top: 60px;
 }
 .rest_name{
     font-family: $font-title;
@@ -297,27 +390,54 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    padding: 20px 20px 0 20px ;
 }
 .rest_name i{
-    line-height: 40px;
-    font-size: 24px;
+    cursor: pointer;
     align-self: center;
+    opacity: 1;
+    font-weight: 100;
+    font-size: 20px;
+    background-image: linear-gradient($color-secondary,$color-primary);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: $font-color;
+    transition: all 400ms ease-in-out;
+}
+.rest_name i:hover{
+    animation: fill 0.4s ease-in-out;
+    display: inline-block;
+    opacity: 1;
+    background-image: linear-gradient($color-secondary,$color-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    transform-origin: 50% bottom;
+    transition-duration: 0.5s;
+    transform: translateY(11%) scale(1.2);
 }
 .menu{
     background-color: #F6F6F6;
     border-radius: 35px 35px 0 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    //position: relative;
-    //top: 200px;
-}
-.appetizer, .meal, .dessert{
-    margin-bottom: 30px;
+    position: relative;
+    top: -145px;
+    gap: 25px;
 }
 .id_menu{
     margin-left: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.id_menu::after{
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 0px;
+    border-bottom: 2px solid #62bba5;
+    width: 30px;
+    margin-bottom: 10px;
 }
 .plat{
     display: flex;
@@ -325,19 +445,67 @@ img{
     justify-content: space-between;
     border: 0px solid transparent;
     border-radius: 15px;
-    box-shadow: 0px 13px 17px 0px rgba(136, 140, 135, 0.77);
+    box-shadow: 0px 7px 16px 0px rgb(136 140 135 / 46%);
     margin: 10px;
     padding: 10px;
 }
-.btn_check{
-    display: none;
+.plat h2{
+    margin: 0;
 }
+
 .price{
     font-family: $font-text;
     font-size: 12px;
     font-weight: 500;
     align-self: flex-end;
 }
+.btn_check{
+    height: 100%;
+    width: 20px;
+    background-color: $color-tertiary;
+    display: inline-block;
+}
+.btn_check i{
+    -webkit-background-clip: text;
+    color: white;
+    transition: rotate 400ms ease-in-out;
+}
+.btn_check i:hover{
+
+}
 .order{
     margin-bottom: 30px;
+}
+//RESPONSIVE// 
+@media all and ( min-width : 767px ) {
+    main, footer{
+        max-width: 1440px;
+    }
+    #tuto_ul{
+        flex-direction: row;
+    }
+    #tuto_ul li{
+        width: 200px;
+    }
+    #container_cards{
+        flex-direction: row;
+        margin: 0 20px;
+        flex-wrap: wrap;
+    }
+    footer{
+        display: flex;
+        flex-direction: row-reverse; 
+        height: 70px;   
+    }
+    footer h3{
+        display: flex;
+        align-items: center;
+        padding: 0 20px 0 20px;
+    }
+    #footer_ul{
+        flex-direction: row;
+        gap: 20px;
+        padding-left: 0;
+        align-items: center;
+    }
 }

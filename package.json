@@ -1,0 +1,19 @@
+{
+  "name": "p4-ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss ./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexiaThernisien/Projet_4_Ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexiaThernisien/Projet_4_Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/AlexiaThernisien/Projet_4_Ohmyfood#readme"
+}
