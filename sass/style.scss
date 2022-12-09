@@ -419,6 +419,23 @@ footer h3 {
   transition-duration: 0.5s;
   transform: translateY(11%) scale(1.2);
 }
+.appetizer {
+    animation: fadein 1500ms ease-out;
+}
+.meal {
+    animation: fadein 2000ms ease-out;
+}
+.dessert { 
+    animation: fadein 2500ms ease-out;
+}
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
 .menu {
   background-color: #f6f6f6;
   border-radius: 35px 35px 0 0;
@@ -450,30 +467,44 @@ footer h3 {
   border-radius: 15px;
   box-shadow: 0px 7px 16px 0px rgb(136 140 135 / 46%);
   margin: 10px;
-  padding: 10px;
+}
+.plat_name {
+    margin: 10px;
 }
 .plat h2 {
   margin: 0;
 }
-
+.price_btn{
+    display: flex;
+    overflow: hidden;
+    border-radius: 0 15px 15px 0;
+    gap: 5px;
+}
 .price {
   font-family: $font-text;
   font-size: 12px;
   font-weight: 500;
   align-self: flex-end;
+  margin-bottom: 10px;
 }
 .btn_check {
+  cursor: pointer;
   height: 100%;
-  width: 20px;
+  width: 0px;
   background-color: $color-tertiary;
-  display: inline-block;
+  border-radius: 0 15px 15px 0;
+  justify-content: center;
+  display: flex;
+  transition: width 400ms ease-in-out;
+}
+.btn_check:hover {
+  width: 50px;
 }
 .btn_check i {
   -webkit-background-clip: text;
-  color: white;
-  transition: rotate 400ms ease-in-out;
-}
-.btn_check i:hover {
+  color: $backlightgrey;
+  vertical-align: middle;
+  line-height: 52px;
 }
 .menu button {
   margin-bottom: 30px;
