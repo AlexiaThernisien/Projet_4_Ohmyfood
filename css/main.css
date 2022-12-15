@@ -174,10 +174,9 @@ button {
 
 button:hover {
   box-shadow: 4px 8px 25px 0px rgba(51, 50, 50, 0.7);
-  background: linear-gradient(353deg, #9f6cdc -5.2%, #c463a9 74.74%);
-  filter: brightness(1.35);
-  text-shadow: 0px 2px 15px rgba(200, 199, 199, 0.45);
-  color: white;
+  filter: brightness(1.15);
+  text-shadow: 0px 2px 15px rgba(200, 199, 199, 0.124);
+  color: whitesmoke;
 }
 
 #tuto {
@@ -343,23 +342,21 @@ h4 {
   opacity: 1;
   font-weight: 100;
   font-size: 20px;
-  background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
   color: black;
-  transition: all 400ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 
 .icon i:hover {
-  animation: fill 0.4s ease-in-out;
+  animation: fill 0.6s ease-in-out;
   display: inline-block;
   opacity: 1;
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  transform-origin: 50% bottom;
-  transition-duration: 0.5s;
+  transform-origin: bottom;
   transform: translateY(11%) scale(1.2);
 }
 
@@ -520,6 +517,7 @@ footer h3 {
   border-radius: 15px;
   box-shadow: 0px 7px 16px 0px rgba(136, 140, 135, 0.46);
   margin: 10px;
+  cursor: pointer;
 }
 
 .plat_name {
